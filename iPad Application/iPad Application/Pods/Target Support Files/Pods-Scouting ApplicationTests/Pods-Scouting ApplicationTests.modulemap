@@ -1,0 +1,6 @@
+framework module Pods_Scouting_ApplicationTests {
+  umbrella header "Pods-Scouting ApplicationTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
