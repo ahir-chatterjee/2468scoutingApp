@@ -1,14 +1,17 @@
 # Plots a radar chart.
-
 from math import pi
 import matplotlib.pyplot as plt
 import os
 
-def createRadarPlot(teamNum,agility,switch,scale,hang,assist,auto):
+def createRadarPlot(teamNum,agility,switch,scale,hang,vault):
     # Set data
-    bot = ['Agility', 'Switch', 'Scale', 'Hang', 'Assitance', 'Autonomous']
-    #values = [5,5,5,5,3,5]
-    values = [agility, switch, scale, hang, assist, auto]
+    bot = ['Agility', 'Switch', 'Scale', 'Hang', 'Vault']
+    values = [agility, switch, scale, hang, vault]
+    #teamNum = "3310"
+    #values = [3,5,0,5,3,]
+    for i in range(0,len(values)):
+        if(values[i] == 0):
+            values[i] = 0.15
     
     N = len(bot)
     
@@ -72,7 +75,7 @@ def createRadarPlot(teamNum,agility,switch,scale,hang,assist,auto):
     	else:
     		ha, distance_ax = "right", 1
     
-    	ax.text(angle_rad, 5 + distance_ax, bot[i], size=10, horizontalalignment=ha, verticalalignment="center")
+    	ax.text(angle_rad, 5 + distance_ax, bot[i], size=20, horizontalalignment=ha, verticalalignment="center")
     
     
     # Show polar plot
