@@ -1,0 +1,15 @@
+PODS:
+  - AsyncTimer (2.2.0)
+  - QRCode (2.0)
+
+DEPENDENCIES:
+  - AsyncTimer
+  - QRCode
+
+SPEC CHECKSUMS:
+  AsyncTimer: d8512868a7f4de79f58b6962d590f04b8dab5f7a
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+
+PODFILE CHECKSUM: 162c06e82aba35cccd1657cf95add5dc8e866d4f
+
+COCOAPODS: 1.4.0

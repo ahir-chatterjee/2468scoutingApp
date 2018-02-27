@@ -6,11 +6,13 @@
 //  Copyright © 2017 Vrishab Madduri. All rights reserved.
 //
 import UIKit
+import AsyncTimer
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var startTime: Date? = nil
     var descriptionOptions = [""]
     var assistOptions = [""]
+    var internalTimer: AsyncTimer? = nil
     @IBOutlet weak var matchInput: UITextField!
     @IBOutlet weak var teamInput: UITextField!
     @IBOutlet weak var matchColor: UISegmentedControl!
@@ -21,33 +23,44 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var lineControl: UISegmentedControl!
     @IBOutlet weak var penaltyControl: UISegmentedControl!
     @IBOutlet weak var AllianceSwitch: UIStepper!
-    
+    @IBOutlet weak var timerValue: UITextField!
+    @IBOutlet weak var randomSwitch: UISegmentedControl!
+    @IBOutlet weak var randomScale: UISegmentedControl!
     @IBOutlet weak var hangInput: UITextField!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var failedButton: UIButton!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        State.global = State()
+    }
     
     @IBAction func failed(_ sender: Any) {
-        GlobalState.failureArray[GlobalState.failureArray.count - 1] = true
+        State.global.failureArray[State.global.failureArray.count - 1] = true
         
         let timeElapsed = Date().timeIntervalSince(startTime!)
         
         if timeElapsed > 0.5 {
             startButton.titleLabel?.text = "Start Timer"
-            GlobalState.timerValues.append(Int(timeElapsed))
+            State.global.timerValues.append(Int(timeElapsed))
+            
+            internalTimer?.stop()
+            timerValue.text = ""
         }
+        
+        failedButton.isHidden = true
+        failedButton.isUserInteractionEnabled = false
         
         startButton.isHidden = false
         startButton.isUserInteractionEnabled = true
         
-        pauseButton.isHidden = true
-        pauseButton.isUserInteractionEnabled = false
     }
     
     
     @IBAction func start(_ sender: Any) {
         print("starting \(Date())")
         print(startButton.titleLabel)
-        GlobalState.failureArray.append(false)
+        State.global.failureArray.append(false)
         startTime = Date()
         
         startButton.isHidden = true
@@ -55,16 +68,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         pauseButton.isHidden = false
         pauseButton.isUserInteractionEnabled = true
+        failedButton.isHidden = false
+        failedButton.isUserInteractionEnabled = true
+        
+        internalTimer = AsyncTimer(interval: .seconds(1), repeats: true, block: { () in
+            self.timerValue.text = String(Int(Date().timeIntervalSince(self.startTime!)))
+        })
+        
+        internalTimer?.start()
     }
 
     @IBAction func pause(_ sender: Any) {
-        print("finished")
         
         let timeElapsed = Date().timeIntervalSince(startTime!)
         
         if timeElapsed > 0.5 {
             startButton.titleLabel?.text = "Start Timer"
-            GlobalState.timerValues.append(Int(timeElapsed))
+            State.global.timerValues.append(Int(timeElapsed))
+            
+            internalTimer?.stop()
+            timerValue.text = ""
         }
         
         pauseButton.isHidden = true
@@ -79,38 +102,38 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var vaultInput: UITextField!
     @IBAction func vault(_ sender: UIStepper) {
-        GlobalState.vault = Int(vaultInput.text ?? "0") ?? 0
-        vaultInput.text = String(Int(sender.value) + GlobalState.vault)
-        GlobalState.vault = Int(vaultInput.text ?? "0") ?? 0
+        State.global.vault = Int(vaultInput.text ?? "0") ?? 0
+        vaultInput.text = String(Int(sender.value) + State.global.vault)
+        State.global.vault = Int(vaultInput.text ?? "0") ?? 0
         sender.value = 0
     }
     @IBOutlet weak var AllianceSwitchInput: UITextField!
     
     @IBAction func autoScale(_ sender: UIStepper) {
-        GlobalState.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
-        autoscaleInput.text = String(Int(sender.value) + GlobalState.autoscale)
-        GlobalState.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
+        State.global.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
+        autoscaleInput.text = String(Int(sender.value) + State.global.autoscale)
+        State.global.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
         sender.value = 0
     }
     @IBAction func autoSwitch(_ sender: UIStepper) {
-        GlobalState.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
-        autoswitchInput.text = String(Int(sender.value) + GlobalState.autoswitch)
-        GlobalState.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
+        State.global.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
+        autoswitchInput.text = String(Int(sender.value) + State.global.autoswitch)
+        State.global.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
         sender.value = 0
     }
     @IBAction func allianceswitchvalueChanged(_ sender: UIStepper) {
-    GlobalState.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
-    AllianceSwitchInput.text = String(Int(sender.value) + GlobalState.allianceswitch)
-    GlobalState.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
+    State.global.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
+    AllianceSwitchInput.text = String(Int(sender.value) + State.global.allianceswitch)
+    State.global.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
         sender.value = 0
     }
     @IBOutlet weak var descriptionPicker: UIPickerView!
     
     @IBOutlet weak var assistPicker: UIPickerView!
     @IBAction func opposingallianceswitchChanged(_ sender: UIStepper) {
-        GlobalState.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
-        OpposingSwitchInput.text = String(Int(sender.value) + GlobalState.opposingswitch)
-        GlobalState.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
+        State.global.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
+        OpposingSwitchInput.text = String(Int(sender.value) + State.global.opposingswitch)
+        State.global.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
         sender.value = 0
     }
     
@@ -123,6 +146,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         descriptionPicker.dataSource = self
         assistPicker.delegate = self
         assistPicker.dataSource = self
+        pauseButton.isHidden = true
+        failedButton.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -131,22 +156,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
    
     @IBAction func submit(_ sender: Any) {
-        GlobalState.color = matchColor.titleForSegment(at:  matchColor.selectedSegmentIndex) ?? "No"
-        GlobalState.match = Int(matchInput.text ?? "0") ?? -1
-        GlobalState.team = Int(teamInput.text ?? "0") ?? -1
-        GlobalState.comment = String(commentInput.text!)
-        GlobalState.penalty = penaltyControl.titleForSegment(at:  penaltyControl.selectedSegmentIndex) ?? "No"
-        GlobalState.line = lineControl.titleForSegment(at:  lineControl.selectedSegmentIndex) ?? "No"
-        GlobalState.hang = String(hangInput.text!)
-        GlobalState.vault = Int(vaultInput.text ?? "0") ?? 0
-        GlobalState.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
-        GlobalState.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
-        GlobalState.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
-        GlobalState.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
+        State.global.color = matchColor.titleForSegment(at:  matchColor.selectedSegmentIndex) ?? "No"
+        State.global.match = Int(matchInput.text ?? "0") ?? -1
+        State.global.team = Int(teamInput.text ?? "0") ?? -1
+        State.global.comment = String(commentInput.text!)
+        State.global.penalty = penaltyControl.titleForSegment(at:  penaltyControl.selectedSegmentIndex) ?? "No"
+        State.global.line = lineControl.titleForSegment(at:  lineControl.selectedSegmentIndex) ?? "No"
+        State.global.hang = String(hangInput.text!)
+        State.global.vault = Int(vaultInput.text ?? "0") ?? 0
+        State.global.autoscale = Int(autoscaleInput.text ?? "0") ?? 0
+        State.global.autoswitch = Int(autoswitchInput.text ?? "0") ?? 0
+        State.global.allianceswitch = Int(AllianceSwitchInput.text ?? "0") ?? 0
+        State.global.opposingswitch = Int(OpposingSwitchInput.text ?? "0") ?? 0
+        State.global.randomSwitch = randomSwitch.titleForSegment(at:  randomSwitch.selectedSegmentIndex) ?? "No"
+        State.global.randomScale = randomScale.titleForSegment(at:  randomScale.selectedSegmentIndex) ?? "No"
+        let alert = UIAlertController(title: "Exiting", message: "Are you sure you want to submit?", preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+            self.performSegue(withIdentifier: "SubmitSegue", sender: sender)
+        }))
         
-         self.performSegue(withIdentifier: "SubmitSegue", sender: self)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .`default`, handler: { _ in
+        }))
         
+        self.present(alert, animated: true, completion: nil)
     }
   
      func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -159,9 +192,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
   
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == descriptionPicker {
-            GlobalState.pickerView = self.pickerView(pickerView, titleForRow: row, forComponent: component)!
+            State.global.pickerView = self.pickerView(pickerView, titleForRow: row, forComponent: component)!
         } else {
-            GlobalState.assistView = row - 1
+            State.global.assistView = row - 1
         }
     }
     

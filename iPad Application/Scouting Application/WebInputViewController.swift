@@ -8,45 +8,61 @@
 
 import Foundation
 import UIKit
+import QRCode
 
 class WebInputViewController: UIViewController {
     @IBOutlet weak var matchLabel: UILabel!
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var matchcolorLabel: UILabel!
-
-    @IBOutlet weak var encodedTextView: UITextView!
-    
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        matchLabel.text = "Match #: \(GlobalState.match)"
-        teamLabel.text = "Team #: \(GlobalState.team)"
-        matchcolorLabel.text = "Alliance Color: \(GlobalState.color)"
+        matchLabel.text = "Match #: \(State.global.match)"
+        teamLabel.text = "Team #: \(State.global.team)"
+        matchcolorLabel.text = "Alliance Color: \(State.global.color)"
         
-        let arrayString = GlobalState.timerValues.enumerated().map { (index, value) in
-            "\(value) \(GlobalState.failureArray[index] ? 0 : 1)"
+        let arrayString = State.global.timerValues.enumerated().map { (arg) in
+            let (index, value) = arg
+            
+            return "\(value) \(State.global.failureArray[index] ? 0 : 1)"
         }.joined(separator: " ")
         
         let hangTime: Int
         
-        if let _hangTime = Int(GlobalState.hang) {
+        if let _hangTime = Int(State.global.hang) {
             hangTime = _hangTime
-        } else if GlobalState.hang.uppercased() == "N/A" {
-            hangTime = -1
-        } else {
+        } else if State.global.hang.uppercased() == "FAILED" {
             hangTime = 0
+        } else {
+            hangTime = -1
         }
         
-        encodedTextView.text = """
-        \(GlobalState.penalty == "Yes" ? 1 : 0) \(GlobalState.line == "Yes" ? 1 : 0) \(GlobalState.autoswitch) \(GlobalState.autoscale) \(GlobalState.pickerView) \(GlobalState.allianceswitch) \(GlobalState.opposingswitch) \(hangTime) \(GlobalState.assistView) \(GlobalState.vault) | \(arrayString) | \(GlobalState.comment)
+        let text = """
+        (#\(State.global.match),\(State.global.color == "Red" ? "R" : "B"),\(State.global.team),\(State.global.randomSwitch == "Left" ? 0:1),\(State.global.randomScale == "Left" ? 0:1)) \(State.global.penalty == "Yes" ? 1 : 0) \(State.global.line == "Yes" ? 1 : 0) \(State.global.autoswitch) \(State.global.autoscale) \(State.global.pickerView) \(State.global.allianceswitch) \(State.global.opposingswitch) \(hangTime) \(State.global.assistView) \(State.global.vault) | \(arrayString) | \(State.global.comment)
         """
         
+        imageView.image = QRCode(text)?.image
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func doneButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Exiting", message: "Are you sure you are done?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+            self.performSegue(withIdentifier: "doneSegue", sender: sender)
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .`default`, handler: { _ in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
