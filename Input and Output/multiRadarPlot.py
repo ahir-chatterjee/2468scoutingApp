@@ -5,15 +5,22 @@ from math import pi
 import matplotlib.pyplot as plt
 import os
 
-def createRadarPlot(teamNum,switch,scale,hang,vault):
+def createMultiRadarPlot(team1,team2,team3):
     # Set data
     bot = ['Switch', 'Scale', 'Hang', 'Vault']
-    values = [switch, scale, hang, vault]
-    #teamNum = "3310"
-    #values = [3,5,0,5,3,]
-    for i in range(0,len(values)):
-        if(values[i] == 0):
-            values[i] = 0.15
+    #values = [agility, switch, scale, hang, vault]
+    values1 = [team1[1],team1[2],team1[3],team1[4]]
+    values2 = [team2[1],team2[2],team2[3],team2[4]]
+    values3 = [team3[1],team3[2],team3[3],team3[4]]
+    for i in range(0,len(values1)):
+        if(values1[i] == 0):
+            values1[i] = 0.15
+    for i in range(0,len(values2)):
+        if(values2[i] == 0):
+            values2[i] == 0.15
+    for i in range(0,len(values3)):
+        if(values3[i] == 0):
+            values3[i] == 0.15
     
     N = len(bot)
     
@@ -21,7 +28,9 @@ def createRadarPlot(teamNum,switch,scale,hang,vault):
     
     # Because our chart will be circular we need to append a copy of the first 
     # value of each list at the end of each list with data
-    values += values[:1]
+    values1 += values1[:1]
+    values2 += values2[:1]
+    values3 += values3[:1]
     x_as += x_as[:1]
     
     
@@ -55,7 +64,9 @@ def createRadarPlot(teamNum,switch,scale,hang,vault):
     
     
     # Plot data
-    ax.plot(x_as, values, color="#539EFF", linewidth=5, linestyle='solid', zorder=3)
+    ax.plot(x_as, values1, color="#539EFF", linewidth=3, linestyle='solid', zorder=3)
+    ax.plot(x_as, values2, color="#d62822", linewidth=3, linestyle='solid', zorder=3)
+    ax.plot(x_as, values3, color="#25d167", linewidth=3, linestyle='solid', zorder=3)
     
     # Fill area
     #ax.fill(x_as, values, 'b', alpha=0.3)
@@ -81,8 +92,8 @@ def createRadarPlot(teamNum,switch,scale,hang,vault):
     
     
     # Show polar plot
-    plt.savefig((str)(teamNum) + ".png")
+    plt.savefig(team1[0] + "+" + team2[0] + "+" + team3[0] + ".png")
     ax.clear()
 
 if __name__ == '__main__':
-    createRadarPlot()
+    createMultiRadarPlot()

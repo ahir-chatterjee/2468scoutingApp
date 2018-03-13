@@ -1,6 +1,7 @@
 import json
 import radarPlot
 import spreadsheetMaker
+import multiRadarPlot
 
 def runScoutingApp():
     class Match(object):
@@ -17,6 +18,13 @@ def runScoutingApp():
         def importDict(self,diction):
             for key in self.dict:
                 self.dict[key] = diction[key]
+
+        def compareMatch(self,other):
+            same = True
+            for key in self.dict:
+                if(self.dict[key] != other.dict[key]):
+                    same = False
+            return same
     
     class Team(object):
     
@@ -24,7 +32,7 @@ def runScoutingApp():
             self.dict =  {"matches": [],"number": teamNum,"autoPenalty": [],"autoLine": [],"autoSwitch": [],"autoScale": [],
                           "startingPos": [],"teleSwitch": [],"teleOppSwitch": [],"teleScale": [],"hang": [],
                           "assistance": [],"vaultBlocks": [],"comments": [],"cims": 0,"wheels": 0,"drivetrain": "",
-                          "weight": 0,"preAuto": "","preTele": "","preHang": "","preAssist": "","language": ""}
+                          "weight": 0,"preAuto": "","preTele": "","preHang": "","preAssist": "","language": "","preScoutComments": ""}
     
         def returnTeam(self):
             returnStr = ""
@@ -57,6 +65,7 @@ def runScoutingApp():
             self.dict["preTele"] = preData[7]
             self.dict["preHang"] = preData[8]
             self.dict["preAssist"] = preData[9]
+            self.dict["preScoutComments"] = preData[10]
     
         def importDict(self,diction):
             for key in self.dict:
@@ -81,25 +90,13 @@ def runScoutingApp():
     
     def makeSpreadsheet():
         spreadsheetMaker.makeSpreadsheet()
-    
-    def createRadarPlot(team):
+
+    def radarPlotStats(team):
         teamNum = team.dict["number"]
         numMatches = (float)(len(team.dict["matches"]))
         if(numMatches == 0):
             numMatches = 1
         
-        agility = 0
-        if((int)(team.dict["cims"]) >= 6 and (int)(team.dict["weight"]) <= 100):
-            agility = 5
-        elif((int)(team.dict["cims"]) >= 6 and (int)(team.dict["weight"]) > 100):
-            agility = 4
-        elif((int)(team.dict["cims"]) >= 4 and (int)(team.dict["weight"]) <= 100):
-            agility = 3
-        elif((int)(team.dict["cims"]) >= 4 and (int)(team.dict["weight"]) > 100):
-            agility = 2
-        elif((int)(team.dict["cims"]) >= 2 and (int)(team.dict["weight"]) <= 100):
-            agility = 1
-            
         switch = 0
         sumSwitch = 0
         for i in range(0,len(team.dict["matches"])):
@@ -176,8 +173,19 @@ def runScoutingApp():
             elif(cubes > 0):
                 sumVault += 1
         vault = (float)(sumVault)/numMatches
-        
-        radarPlot.createRadarPlot(teamNum,agility,switch,scale,hang,vault)
+
+        teamStats = [teamNum,switch,scale,hang,vault]
+        return teamStats
+    
+    def createRadarPlot(team):
+        teamStats = radarPlotStats(team)
+        radarPlot.createRadarPlot(teamStats[0],teamStats[1],teamStats[2],teamStats[3],teamStats[4])
+
+    def createMultiPlot(team1,team2,team3):
+        team1Stats = radarPlotStats(team1)
+        team2Stats = radarPlotStats(team2)
+        team3Stats = radarPlotStats(team3)
+        multiRadarPlot.createMultiRadarPlot(team1Stats,team2Stats,team3Stats)
 
     def readMatchFile(filename):
         matchFile = open(filename+".txt",'r')
@@ -201,15 +209,29 @@ def runScoutingApp():
             if(len(random) != 2):
                 random.append(matchInfo[3])
                 random.append(matchInfo[4][:len(matchInfo[4])-1])
-        match = Match(number,red,blue,random)
-        matchList.append(match)
-        for i in range(0,len(teamStrs)):
-            teamNum = teamStrs[i].split(')')[0].split(',')[2]
-            teamStrs[i] = teamStrs[i].split(')')[1]
-            teamStrs[i] = teamStrs[i][1:]
-            teamStrs[i] += '| ' + teamNum
-        print teamStrs
-        enterQRTeams(match,teamStrs)
+        newMatch = Match(number,red,blue,random)
+        duplicate = False
+        for match in matchList:
+            if(match.compareMatch(newMatch)):
+                duplicate = True
+        if(duplicate):
+            choice = raw_input("Duplicate match detected. Proceed with entering? (Y/N) ")
+            if(choice[0] == "y" or choice[0] == "Y"):
+                duplicate = False
+        if(not duplicate):
+            print (str)(filename) + ".txt imported."
+            matchList.append(newMatch)
+            for i in range(0,len(teamStrs)):
+                teamNum = teamStrs[i].split(')')[0].split(',')[2]
+                teamStrs[i] = teamStrs[i].split(')')[1]
+                teamStrs[i] = teamStrs[i][1:]
+                teamStrs[i] += '| ' + teamNum
+            enterQRTeams(newMatch,teamStrs)
+            return duplicate
+        else:
+            print (str)(filename) + ".txt importing aborted."
+            return duplicate
+            
     
     def enterPreData():
         tempList = []
@@ -223,6 +245,7 @@ def runScoutingApp():
         tempList.append(raw_input("Enter " + tempList[0] + "'s tele capabilities: "))
         tempList.append(raw_input("Enter " + tempList[0] + "'s hang capabilities: "))
         tempList.append(raw_input("Enter " + tempList[0] + "'s assist capabilities: "))
+        tempList.append(raw_input("Enter " + tempList[0] + "'s additional comments. "))
         found = False
         for team in teamList:
             if(team.dict["number"] == tempList[0]):
@@ -372,6 +395,10 @@ def runScoutingApp():
                         if(match.dict["number"] == cmdarray[1]):
                             found = True
                             print match.returnMatch()
+                    if(cmdarray[1] == "all"):
+                        for match in matchList:
+                            print match.returnMatch()
+                        found = True
                     if(not found):
                         print "Could not find match #" + cmdarray[1] + "."
                 else:
@@ -389,7 +416,7 @@ def runScoutingApp():
             elif(basecmd == "radarPlot"):
                 for team in teamList:
                     createRadarPlot(team)
-                    print (str)(team.dict["number"]) + ".png created."
+                print "radar plots created"
             elif(basecmd == "makeSpreadsheet"):
                 makeSpreadsheet()
             elif(basecmd == "readMatchFile"):
@@ -397,6 +424,28 @@ def runScoutingApp():
                     readMatchFile(cmdarray[1])
                 else:
                     print "readMatchFile takes exactly one parameter (matchFile)"
+            elif(basecmd == "runApp"):
+                if(not readMatchFile(raw_input("Import which match file? "))):
+                    save()
+                    makeSpreadsheet()
+                    for team in teamList:
+                        createRadarPlot(team)
+                    print "radar plots created"
+            elif(basecmd == "multiPlot"):
+                if(len(cmdarray) == 4):
+                    team1 = Team("-1")
+                    team2 = Team("-1")
+                    team3 = Team("-1")
+                    for team in teamList:
+                        if(team.dict["number"] == cmdarray[1]):
+                            team1 = team
+                        elif(team.dict["number"] == cmdarray[2]):
+                            team2 = team
+                        elif(team.dict["number"] == cmdarray[3]):
+                            team3 = team
+                    createMultiPlot(team1,team2,team3)
+                else:
+                    print "multiPlot takes exatly 4 parameters (team1,team2,team3)"
             else:
                 print "Unknown command. Type 'help' for a list of valid commands."
             
@@ -405,7 +454,7 @@ def runScoutingApp():
     matchList = loadMatchesList("matches.txt")
     teamList = loadTeamsList("teams.txt")
     
-    cmds = ["matchReport","preScouting","team","match","help","save","readMatchFile","makeSpreadsheet","radarPlot"]
+    cmds = ["runApp","matchReport","preScouting","team","match","help","save","readMatchFile","makeSpreadsheet","radarPlot","multiPlot"]
     while True:
         print "Enter a command."
         cmd = raw_input("")
@@ -420,5 +469,4 @@ def runScoutingApp():
     
 if __name__ == '__main__':
     runScoutingApp()
-
 

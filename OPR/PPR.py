@@ -64,8 +64,11 @@ def returnQMStats(targetKey): #ONLY WORKS FOR QM's
                 returnList.append((str)(team[3:]))
             for team in match["alliances"]["red"]["team_keys"]:
                 returnList.append((str)(team[3:]))
-            returnList.append((int)(match["alliances"]["blue"]["score"] - match["score_breakdown"]["blue"]["foulPoints"]))
-            returnList.append((int)(match["alliances"]["red"]["score"] - match["score_breakdown"]["blue"]["foulPoints"]))
+            totalPoints = (int)(match["alliances"]["blue"]["score"]) + (int)(match["alliances"]["red"]["score"])
+            - (int)(match["score_breakdown"]["blue"]["foulPoints"])
+            - (int)(match["score_breakdown"]["red"]["foulPoints"])
+            returnList.append((float)(match["alliances"]["blue"]["score"]/(float)(totalPoints)))
+            returnList.append((float)(match["alliances"]["red"]["score"]/(float)(totalPoints)))
     return returnList
 
 def createQMOutput():
@@ -122,7 +125,7 @@ def calculateOPR():
     return numpy.linalg.solve(a,b)
 
 def returnOPR():
-    outputFile = open("oprOutput.txt",'w')
+    outputFile = open("pprOutput.txt",'w')
     returnStr = ""
     count = 0
     outputFile.write(fileName[:len(fileName)-4] + "\n")
@@ -134,9 +137,9 @@ def returnOPR():
     print oprList
     for team in oprList:
         outputFile.write((str)(team[0]) + " " + (str)(team[1]) + ". \n")
-        returnStr += "Team " + (str)(team[0]) + " has a OPR of " + (str)(team[1]) + ". \n"
+        returnStr += "Team " + (str)(team[0]) + " has a PPR of " + (str)(team[1]) + ". \n"
     outputFile.close()
-    return returnStr  
+    return returnStr    
                         
 QMStats = createQMOutput()
 teamVectors = initializeTeamVectors(QMStats)
