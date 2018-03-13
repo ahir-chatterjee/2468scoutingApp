@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#24,R,6358,0,1) 0 0 0 0 center 1 0 -1 -1 2 |  | penalty in auto for moving many blocks, citrus assist dropped them
+QR-Code:(#24,R,5871,0,1) 0 1 0 0 left 0 0 -1 -1 3 |  | cannot pick up cubes; must push cubes
+QR-Code:(#24,B,5974,0,1) 0 0 0 0 left 0 0 -1 -1 0 |  | didn't show up
+QR-Code:(#24,B,841,0,1) 0 1 0 0 right 1 0 -1 -1 0 |  |
+QR-Code:(#24,R,1678,0,1) 0 1 1 1 right 2 0 10 0 0 | 1 1 3 0 5 1 2 1 | penalty scale, dropped team
+QR-Code:(#24,B,159,0,1) 0 1 1 0 center 0 0 -1 -1 9 | 10 0 |

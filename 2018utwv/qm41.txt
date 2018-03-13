@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#41,R,3239,1,0) 0 1 1 0 center 0 0 -1 -1 0 | 2 1 4 0 6 1 3 1 9 0 |
+QR-Code:(#41,B,3230,1,0) 0 1 1 0 left 0 0 5 -1 0 | 5 1 |
+QR-Code:(#41,R,3225,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | penalty for defending against scale attempt
+QR-Code:(#41,R,4348,1,0) 0 0 0 0 left 1 0 -1 -1 0 | 3 0 |
+QR-Code:(#41,B,670,1,0) 0 1 1 0 right 0 0 3 -1 0 | 3 1 5 1 6 1 7 1 6 1 |
+QR-Code:(#41,B,6358,1,0) 0 1 0 0 left 0 0 -1 -1 4 |  |

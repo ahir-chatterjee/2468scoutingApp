@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#73,R,3200,0,0) 0 1 0 0 center 0 0 -1 -1 0 |  | drove around doing nothing the entire match
+QR-Code:(#73,R,2972,0,0) 0 1 1 0 left 0 0 -1 -1 0 | 3 1 3 1 4 1 3 0 3 1 |
+QR-Code:(#73,B,3243,0,0) 0 1 0 0 left 0 0 -1 -1 0 | 4 1 |
+QR-Code:(#73,B,2484,0,0) 0 0 0 0 right 0 0 -1 -1 0 |  | played defense
+QR-Code:(#73,R,2594,0,0) 0 1 0 0 right 2 0 -1 -1 3 |  |
+QR-Code:(#73,B,2993,0,0) 0 0 0 0 center 2 0 -1 -1 4 |  |

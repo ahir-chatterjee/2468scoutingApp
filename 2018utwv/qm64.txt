@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#64,B,3289,1,0) 0 1 0 0 right 0 0 -1 -1 5 |  |
+QR-Code:(#64,B,1339,1,0) 0 1 1 0 center 0 0 -1 -1 3 | 5 1 3 1 |
+QR-Code:(#64,R,3243,1,0) 0 1 0 0 right 0 0 -1 -1 0 | 3 1 5 1 |
+QR-Code:(#64,R,6358,1,0) 0 1 0 0 left 0 0 -1 -1 0 |  | used portal but took a long time and then just dropped the block, we do a much better job. mostly just drives around and idles in random places. poor driving. poor communications.
+QR-Code:(#64,R,5933,1,0) 0 1 1 0 left 0 0 -1 -1 9 |  |
+QR-Code:(#64,B,2576,1,0) 0 1 0 0 left 1 0 -1 -1 0 |  | defended against for around half the time

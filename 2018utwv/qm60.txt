@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#60,B,2576,1,1) 0 1 0 0 right 0 0 -1 -1 0 | 1 1 | able to shoot cube into scale from ground
+QR-Code:(#60,R,4550,1,1) 0 1 1 0 left 3 0 10 -1 3 | 4 1 5 1 5 0 | penalty on scale.
+QR-Code:(#60,B,5933,1,1) 0 1 1 0 center 1 0 0 0 0 |  | has trouble in intaking and holding onto cubes
+QR-Code:(#60,R,6400,1,1) 0 1 0 0 right 2 0 -1 -1 0 |  | lot of trouble picking up cubes
+QR-Code:(#60,B,4944,1,1) 0 1 0 0 right 0 4 -1 -1 9 |  | extremely fast intake and delivery
+QR-Code:(#60,R,6546,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | didn't move for part of the match and tried but failed to do switch

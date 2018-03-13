@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#47,R,3200,1,0) 0 1 0 0 right 0 0 -1 -1 3 |  |
+QR-Code:(#47,B,5461,0,0) 0 1 0 0 right 0 0 -1 -1 4 |  |
+QR-Code:(#47,B,6400,1,0) 0 1 0 0 left 0 1 -1 -1 0 |  |
+QR-Code:(#47,R,5493,1,0) 0 0 0 0 left 1 0 -1 -1 0 |  | intake is ineffective or unusable
+QR-Code:(#47,B,6358,1,0) 0 1 0 0 center 1 0 -1 -1 2 | 5 0 | can scale, exchange, or switch, but has a slow and immaculate scale
+QR-Code:(#47,R,670,1,0) 0 1 1 0 center 0 0 0 -1 0 | 9 1 8 1 5 0 |

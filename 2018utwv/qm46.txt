@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#46,R,3245,0,0) 0 1 1 0 left 2 0 -1 -1 0 | 12 1 |
+QR-Code:(#46,R,3729,0,0) 0 1 0 0 right 1 0 -1 -1 1 |  | Plays defense on alliance switch side
+QR-Code:(#46,B,3243,0,0) 0 1 0 0 right 0 0 -1 -1 0 | 3 1 2 1 |
+QR-Code:(#46,B,3166,0,0) 0 1 0 0 left 1 6 -1 -1 0 |  | no ground intake, requires human player
+QR-Code:(#46,B,4550,0,0) 0 1 0 0 center 0 0 5 -1 0 | 5 1 9 1 7 0 |
+QR-Code:(#46,R,159,0,0) 0 1 0 0 center 1 0 -1 -1 4 | 4 1 6 1 |

@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#44,R,2576,0,0) 0 1 0 0 left 0 0 -1 -1 1 |  |
+QR-Code:(#44,B,2996,0,0) 0 1 0 0 center 1 0 5 -1 3 | 4 1 2 1 4 0 |
+QR-Code:(#44,R,4585,0,0) 0 0 0 0 center 0 0 -1 -1 0 |  | just tried blocking the other team from switch
+QR-Code:(#44,B,2484,0,0) 0 1 0 0 right 0 0 -1 -1 4 |  |
+QR-Code:(#44,B,1891,0,0) 0 1 0 0 left 1 2 5 1 0 |  | another robot hung from them
+QR-Code:(#44,R,5871,0,0) 0 1 0 0 right 0 0 -1 -1 1 |  | scored blue on own switch with preload during teleop

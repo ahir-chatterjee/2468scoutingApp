@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#63,B,2972,1,1) 0 1 0 0 right 1 1 -1 -1 0 | 3 1 6 1 4 0 3 1 |
+QR-Code:(#63,R,5974,1,1) 0 1 0 0 left 0 0 -1 -1 2 |  |
+QR-Code:(#63,B,6457,1,1) 0 1 0 0 right 0 0 -1 -1 0 |  | pushed away when trying to defend. only block it held fell out first seconds of teleop
+QR-Code:(#63,R,1891,1,1) 0 1 1 0 left 0 0 5 -1 0 | 11 1 5 0 4 1 |
+QR-Code:(#63,R,3405,1,1) 0 1 0 0 right 1 3 -1 -1 0 |  |
+QR-Code:(#63,B,159,1,1) 0 1 1 0 center 0 0 -1 -1 0 |  | disconnected for 20s; then played defense

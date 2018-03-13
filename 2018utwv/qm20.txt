@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#20,B,2594,1,0) 0 1 0 0 left 1 1 -1 -1 0 |  |
+QR-Code:(#20,R,968,1,0) 0 1 0 0 right 0 0 -1 -1 1 |  | poor driving and utility
+QR-Code:(#20,R,4348,1,0) 0 0 0 0 center 0 0 -1 -1 0 | 5 1 | plays poor defense
+QR-Code:(#20,R,3289,1,0) 0 1 0 0 left 1 0 -1 -1 0 |  | put cube in wrong switch.
+QR-Code:(#20,B,3166,1,0) 0 1 0 0 right 1 2 -1 -1 0 |  | switch bot. can't score in scale, has issues picking up blocks. only picks up blocks from human player.
+QR-Code:(#20,B,6400,1,0) 0 1 0 0 center 1 0 -1 -1 2 |  |

@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#14,R,192,1,1) 0 0 0 0 left 0 0 -1 -1 0 |  | seems like a connection issue
+QR-Code:(#14,B,3200,1,1) 0 1 0 0 right 2 0 -1 -1 0 |  | Stopped working halfway into teleop . started working about one minute later.
+QR-Code:(#14,B,3243,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  |
+QR-Code:(#14,R,1410,1,1) 0 1 0 0 right 0 0 -1 -1 1 | 2 1 | almost got switch in auto, not good drivers
+QR-Code:(#14,B,6457,1,1) 0 1 0 0 center 0 0 -1 -1 0 |  | very wobbly drive base
+QR-Code:(#14,R,3230,1,1) 0 1 1 0 center 0 3 4 -1 0 | 3 1 8 1 |

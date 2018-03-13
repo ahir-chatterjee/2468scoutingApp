@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#62,B,3230,0,0) 0 1 1 0 center 1 0 -1 -1 0 | 5 1 6 1 6 1 | began hang at 30 secs
+QR-Code:(#62,R,6717,0,0) 0 1 0 0 right 0 2 8 -1 0 | 7 1 5 0 1 0 |
+QR-Code:(#62,R,5871,0,0) 0 1 0 0 left 0 0 -1 -1 3 |  |
+QR-Code:(#62,R,1452,0,0) 0 1 1 0 right 3 0 -1 -1 0 |  | trouble grabbing cubes
+QR-Code:(#62,B,2996,0,0) 0 1 0 0 right 0 0 -1 -1 9 |  | decent intake , great vault delivery
+QR-Code:(#62,B,115,0,0) 0 1 0 0 right 1 5 -1 -1 0 | 9 0 1 1 | robot occasionally stops for 5-10s periods

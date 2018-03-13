@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#68,R,5159,0,0) 0 1 0 0 center 0 0 -1 -1 0 |  |
+QR-Code:(#68,B,3245,0,0) 0 1 1 0 left 0 0 -1 -1 6 | 5 1 |
+QR-Code:(#68,B,670,0,0) 0 1 1 0 center 0 4 10 -1 0 | 1 0 5 1 7 1 5 0 7 1 |
+QR-Code:(#68,B,2594,0,0) 0 1 0 0 right 0 0 -1 -1 0 |  | lift looks slanted and messed up, intake doesn't work ?
+QR-Code:(#68,R,662,0,0) 0 1 0 0 right 3 0 0 -1 0 | 8 1 |
+QR-Code:(#68,R,3006,0,0) 0 1 0 0 left 0 0 -1 -1 0 |  | dropped cube in auto, rushed forward and tried to use portal but we are much better. driver does very poorly on the opposite side

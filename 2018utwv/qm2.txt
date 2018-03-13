@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#2,B,6358,1,1) 0 0 0 0 center 1 0 -1 -1 3 |  |
+QR-Code:(#2,B,7151,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | Just a drive base
+QR-Code:(#2,R,2993,1,1) 0 1 1 0 right 0 0 -1 -1 2 |  | bad drivers, solid auto
+QR-Code:(#2,R,4550,1,1) 0 1 0 0 right 0 0 9 -1 1 |  | wobbly on the ground (top-heavy)
+QR-Code:(#2,B,1891,1,1) 0 1 0 0 right 0 1 -1 -1 0 | 3 1 5 1 | almost auto scale
+QR-Code:(#2,R,3245,1,1) 0 1 0 0 left 0 0 -1 -1 0 | 5 0 | bad intake, was so close for some blocks but failed. this includes the switch and vault

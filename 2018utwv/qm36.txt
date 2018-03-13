@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#36,R,2594,1,0) 0 1 0 0 right 2 0 -1 -1 2 |  |
+QR-Code:(#36,R,5974,1,0) 0 1 0 0 left 0 0 -1 -1 3 |  |
+QR-Code:(#36,B,6546,1,0) 0 1 0 0 left 1 0 -1 -1 0 |  | Intake really bad
+QR-Code:(#36,B,4944,1,0) 0 1 0 0 right 1 0 -1 -1 7 |  |
+QR-Code:(#36,B,1891,1,0) 0 1 0 0 center 0 0 0 -1 0 | 3 0 15 1 | almost got auto, when extended tip over easily
+QR-Code:(#36,R,2996,1,0) 0 1 0 0 center 1 0 -1 -1 0 | 7 1 5 1 4 0 3 0 | Robot didn't move for first 30s of tele-op

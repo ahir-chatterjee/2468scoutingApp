@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#33,R,662,1,0) 0 1 0 0 right 0 0 0 -1 0 |  | connection error in beginning
+QR-Code:(#33,R,4598,1,0) 0 0 0 0 center 1 0 -1 -1 0 |  | wobbly
+QR-Code:(#33,R,3243,1,0) 0 1 0 0 left 0 0 -1 -1 1 |  | disabled.
+QR-Code:(#33,B,3374,1,0) 0 1 1 0 center 0 2 -1 -1 8 |  | looks underwhelming but is a good exchange and switch bot
+QR-Code:(#33,B,5871,1,0) 0 1 0 0 left 0 0 0 -1 1 |  |
+QR-Code:(#33,B,5933,1,0) 0 1 1 0 right 0 1 -1 -1 0 |  | decent team but ending ramp needs a smaller robot to an assisted hang. does not pair well with bigger robots

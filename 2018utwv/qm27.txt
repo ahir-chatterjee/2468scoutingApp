@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#27,R,2594,0,0) 0 1 0 0 left 2 0 -1 -1 0 |  | block stuck in bot at beginning, don't hold blow is tightly
+QR-Code:(#27,R,2993,0,0) 0 0 0 0 center 0 1 -1 -1 0 | 8 1 12 1 | has trouble in intake
+QR-Code:(#27,B,192,0,0) 0 1 0 0 left 0 1 -1 -1 0 | 2 0 5 1 |
+QR-Code:(#27,B,670,0,0) 0 1 -1 0 center 0 1 4 -1 0 | 4 1 5 1 13 1 59 0 | good team but bad mistakes made
+QR-Code:(#27,R,6844,0,0) 0 1 0 0 right 0 0 -1 -1 2 |  |
+QR-Code:(#27,B,6411,0,0) 0 1 0 0 right 3 0 -1 -1 9 |  |

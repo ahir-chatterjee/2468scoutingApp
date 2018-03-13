@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#13,R,2594,0,1) 0 1 0 0 right 2 0 -1 -1 1 |  |
+QR-Code:(#13,B,5461,0,1) 0 1 0 0 left 0 0 -1 -1 3 |  |
+QR-Code:(#13,R,399,0,1) 0 1 0 0 left 0 0 5 -1 0 | 3 1 5 1 6 1 3 1 4 1 | Repeatedly received penalties for pushing down scale
+QR-Code:(#13,B,3729,0,1) 0 0 0 0 center 0 0 -1 -1 0 |  | Fell off citrus circuits platform. didn't do much else. didn't score during teleop or auto
+QR-Code:(#13,R,3225,0,1) 0 0 0 0 center 0 0 -1 -1 2 |  | got in alliances way
+QR-Code:(#13,B,1678,0,1) 0 1 0 1 right 2 0 3 0 2 | 3 1 4 1 4 1 | dropped other robot when assisting

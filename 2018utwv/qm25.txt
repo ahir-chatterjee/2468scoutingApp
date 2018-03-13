@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#25,B,3225,0,1) 0 1 0 0 left 0 0 -1 -1 0 |  | INTAKE BROKE while trying to score switch
+QR-Code:(#25,R,5493,0,1) 0 0 0 0 left 0 1 -1 -1 0 |  |
+QR-Code:(#25,R,3374,0,1) 0 1 1 0 center 0 4 -1 -1 0 |  | helped teammate back up multiple times
+QR-Code:(#25,R,4585,0,1) 0 1 0 0 right 0 0 -1 -1 0 | 8 1 7 1 6 0 | fell over due to other team
+QR-Code:(#25,B,5933,0,1) 0 1 0 0 center 2 0 -1 -1 3 |  |
+QR-Code:(#25,B,3006,0,1) 0 1 0 0 right 0 0 -1 -1 0 | 5 1 | No ground intake, requires human player to load

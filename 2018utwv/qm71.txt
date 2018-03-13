@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#71,R,4598,1,0) 0 0 0 0 center 1 1 -1 -1 0 | 12 0 |
+QR-Code:(#71,R,7151,1,0) 0 1 0 0 left 0 0 -1 -1 0 |  | rookie team only had a drive base, can't expect much. robot got disconnected again.
+QR-Code:(#71,B,6546,1,0) 0 1 0 0 right 0 0 -1 -1 1 |  |
+QR-Code:(#71,R,5493,1,0) 0 0 0 0 right 0 0 -1 -1 0 | 24 1 | very wobbly when extended
+QR-Code:(#71,B,115,1,0) 0 1 1 0 center 1 0 -1 -1 4 | 3 1 | transport method separate from intake
+QR-Code:(#71,B,3405,1,0) 0 1 0 0 left 0 3 -1 -1 0 |  | has occasional trouble holding onto cubes

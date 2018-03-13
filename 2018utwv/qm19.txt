@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#19,B,6546,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | passive intake, can't get cubes
+QR-Code:(#19,B,6844,1,1) 0 1 0 0 center 0 0 -1 -1 0 |  | they literally did nothing
+QR-Code:(#19,B,6411,1,1) 0 1 0 0 left 0 0 -1 -1 9 |  |
+QR-Code:(#19,R,6457,1,1) 0 0 0 0 right 0 0 -1 -1 0 |  | tried to defend but did everything very poorly
+QR-Code:(#19,R,3230,1,1) 0 1 1 0 center 0 1 -1 -1 0 | 5 1 6 1 | Immediately went to opposing side of field
+QR-Code:(#19,R,5461,1,1) 0 0 0 0 left 0 0 10 -1 3 |  |

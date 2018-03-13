@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#7,R,3729,0,0) 0 0 0 0 left 0 0 -1 -1 0 |  | intake is ineffective
+QR-Code:(#7,B,6844,0,1) 0 1 0 0 center 0 0 -1 -1 0 |  | has a very hard time intaking blocks and putting them into vault.
+QR-Code:(#7,B,6717,0,0) 0 0 0 0 right 2 0 -1 -1 0 | 6 1 5 1 9 1 | penalty for scale push
+QR-Code:(#7,B,5493,0,1) 0 0 0 0 left 0 0 -1 -1 0 |  | didn't do anything just drove around
+QR-Code:(#7,R,2576,0,1) 0 0 0 0 center 0 0 -1 -1 0 |  | removed robot off field
+QR-Code:(#7,R,5974,0,1) 0 1 1 0 center 0 0 -1 -1 0 |  | trouble picking up blocks

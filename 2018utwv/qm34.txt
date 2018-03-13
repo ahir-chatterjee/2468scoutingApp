@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#34,R,4348,0,0) 0 0 0 0 left 0 0 -1 -1 0 |  | wasn't on field
+QR-Code:(#34,B,5461,0,0) 0 1 0 0 center 0 0 -1 -1 0 |  | penalty cause of poor driving. did not perform well at all
+QR-Code:(#34,R,5071,0,0) 0 1 0 0 right 1 0 -1 -1 0 |  | connection error in begging, touched multiple blocks but judge didn't penalize
+QR-Code:(#34,R,3405,0,0) 0 1 0 0 left 1 1 -1 -1 0 |  |
+QR-Code:(#34,B,2576,0,0) 0 1 0 0 left 0 0 -1 -1 0 |  | disabled part of game. fast robot
+QR-Code:(#34,B,841,0,0) 0 1 0 0 right 0 0 -1 -1 0 |  | defense

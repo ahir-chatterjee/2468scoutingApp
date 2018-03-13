@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#4,R,2468,1,0) 0 1 1 0 center 1 1 -1 -1 2 |  | trouble getting blocks after first 2 blocks
+QR-Code:(#4,B,1452,1,0) 0 1 0 0 center 1 0 -1 -1 1 |  |
+QR-Code:(#4,R,3243,1,0) 0 1 0 0 right 0 0 1 -1 0 | 1 1 2 1 5 0 |
+QR-Code:(#4,B,2996,1,0) 0 1 0 0 left 0 0 -1 -1 0 | 4 0 4 1 4 1 | no connection. breaks down very frequently.
+QR-Code:(#4,R,5461,1,0) 0 1 0 0 left 0 0 -1 -1 1 | 25 0 2 1 | trouble grabbing cubes, penalty tipped scale
+QR-Code:(#4,B,841,1,0) 0 0 0 0 right 0 0 -1 -1 0 |  | bad intake , did nothing

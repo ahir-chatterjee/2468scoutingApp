@@ -1,0 +1,11 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#23,R,2996,1,0) 0 1 0 0 right 2 0 -1 -1 8 |  |
+QR-Code:(#23,R,7151,1,0) 0 1 0 0 center 0 0 -1 -1 0 |  | nothing is on the robot except for drive
+QR-Code:(#23,B,662,1,0) 0 1 0 0 right 0 0 -1 -1 1 | 7 1 | penalty on scale
+QR-Code:(#23,B,3200,1,0) 0 1 0 0 left 0 0 -1 -1 4 |  |
+QR-Code:(#23,B,5071,1,0) 0 0 0 0 center 1 0 -1 -1 0 |  |

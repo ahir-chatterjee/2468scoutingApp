@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#55,B,5974,1,0) 0 1 0 0 center 1 0 -1 -1 3 |  | broken intake at end of match
+QR-Code:(#55,B,7151,1,0) 0 1 0 0 left 0 0 -1 -1 0 |  | no intake mechanism. just drives around and tries to block other robots
+QR-Code:(#55,R,1452,1,0) 1 1 0 0 left 1 0 -1 -1 2 |  |
+QR-Code:(#55,R,670,1,0) 0 1 1 0 center 0 0 7 -1 0 | 5 1 6 1 4 1 |
+QR-Code:(#55,R,3243,1,0) 0 1 0 0 right 0 0 -1 -1 2 |  | decently slow
+QR-Code:(#55,B,968,1,0) 0 1 0 0 right 0 0 -1 -1 0 |  |

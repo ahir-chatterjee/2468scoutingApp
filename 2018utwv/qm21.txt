@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#21,R,1339,0,0) 0 1 1 0 right 0 0 3 -1 0 | 4 1 3 0 4 1 5 1 |
+QR-Code:(#21,B,2468,1,0) 0 1 1 0 center 0 0 -1 -1 6 |  |
+QR-Code:(#21,R,2993,1,0) 0 0 0 0 left 0 3 -1 -1 0 |  |
+QR-Code:(#21,B,3405,1,0) 0 1 0 0 right 0 0 -1 -1 0 |  |
+QR-Code:(#21,R,670,0,0) 0 1 0 0 right 0 2 -1 -1 4 |  |
+QR-Code:(#21,B,6717,1,0) 0 1 0 0 left 3 0 0 -1 0 |  | Failed hang. Hand bot.

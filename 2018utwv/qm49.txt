@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#49,R,2972,0,1) 0 1 0 0 left 2 3 -1 -1 0 |  |
+QR-Code:(#49,B,5071,0,1) 0 1 0 0 right 0 0 -1 -1 0 |  | disconnected after auto  then reconnected
+QR-Code:(#49,B,4598,0,1) 0 0 0 0 left 1 0 -1 -1 1 |  |
+QR-Code:(#49,R,4944,0,1) 0 1 0 0 center 3 0 -1 -1 9 |  |
+QR-Code:(#49,R,192,0,1) 0 1 0 0 left 0 0 -1 -1 0 | 4 1 14 1 |
+QR-Code:(#49,B,3289,0,1) 0 1 0 0 right 1 0 -1 -1 2 |  | stopped half of game

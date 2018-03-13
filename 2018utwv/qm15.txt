@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#15,R,6411,0,1) 0 1 0 0 left 3 0 -1 -1 7 |  |
+QR-Code:(#15,B,4598,0,1) 0 1 0 0 right 2 0 -1 -1 0 |  |
+QR-Code:(#15,R,5974,0,1) 0 1 0 0 right 0 0 0 -1 0 | 20 0 | slow hang
+QR-Code:(#15,B,3405,0,1) 0 1 0 0 left 0 1 -1 -1 0 |  | defense , no intake requires human
+QR-Code:(#15,B,5933,0,1) 0 1 0 0 center 0 0 -1 -1 7 |  |
+QR-Code:(#15,R,2468,0,1) 0 1 0 0 center 1 6 -1 -1 0 |  | failed switch auto, was not in the switch completely

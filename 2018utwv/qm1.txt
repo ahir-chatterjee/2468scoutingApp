@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#1,B,4585,1,1) 0 1 0 0 right 1 0 -1 -1 0 |  | fell over.
+QR-Code:(#1,R,399,1,1) 0 1 0 0 right 0 0 -1 -1 0 | 11 0 | bad drivers
+QR-Code:(#1,B,1339,1,1) 0 0 1 0 center 0 -1 20 -1 0 | 2 0 6 1 3 1 2 1 5 1 |
+QR-Code:(#1,B,662,1,1) 0 1 0 0 left 0 0 -1 -1 4 |  |
+QR-Code:(#1,R,2972,1,1) 0 0 0 0 left 0 0 -1 -1 0 | 19 0 2 1 16 0 3 0 2 0 2 0 | repeatedly dropped cube when delivering for scale
+QR-Code:(#1,R,115,1,1) 0 0 0 0 center 1 0 -1 -1 1 | 3 1 4 1 6 1 4 1 3 0 | slight rocking when diving fast

@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#30,R,4944,0,1) 0 0 0 0 center 1 0 -1 -1 6 |  |
+QR-Code:(#30,B,5159,0,1) 0 1 0 0 left 0 0 10 -1 0 |  |
+QR-Code:(#30,R,968,0,1) 0 1 0 0 right 0 0 -1 -1 0 | 3 1 | connection issue toward end of match and hit the scale in last 3 seconds
+QR-Code:(#30,B,3225,0,1) 1 1 0 0 right 0 0 -1 -1 0 |  | rushed very far in the beginning, used the portal unsuccessfully, 2 penalties for touching too many blocks and rushing way too far. poor driving. 1 more penalty for touching the scale. very poor performance
+QR-Code:(#30,B,4585,0,1) 0 0 0 0 left 0 0 -1 -1 0 |  | disabled half of the games scored nothing
+QR-Code:(#30,R,6717,0,1) 0 1 0 0 left 1 0 15 -1 0 |  |

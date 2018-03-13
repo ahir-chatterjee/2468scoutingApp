@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#51,R,6457,1,0) 0 1 0 0 center 0 0 -1 -1 0 |  | It's a box.
+QR-Code:(#51,B,7151,1,0) 0 1 0 0 left 0 0 -1 -1 2 | 10 1 4 1 | tends to fall over. lost a hand.
+QR-Code:(#51,B,5933,1,0) 0 1 1 0 center 0 0 -1 -1 5 |  |
+QR-Code:(#51,B,6717,1,0) 0 1 0 0 left 0 0 -1 -1 1 | 1 0 5 1 2 0 | intake broke bc lost a hand
+QR-Code:(#51,R,2594,1,0) 0 1 0 0 right 3 4 -1 -1 0 |  |
+QR-Code:(#51,R,841,1,0) 0 1 0 0 left 0 0 -1 -1 4 |  |

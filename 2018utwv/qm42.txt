@@ -1,0 +1,12 @@
+This is the zbarcam output window.
+Hold a bar code in front of the camera (make sure it's in focus!)
+and decoded results will appear below.
+
+Initializing camera, please wait...
+
+QR-Code:(#42,R,2972,0,1) 0 1 0 0 left 1 0 -1 -1 0 | 2 1 3 0 2 0 7 1 5 1 2 1 |
+QR-Code:(#42,B,5461,0,0) 0 1 0 0 left 0 0 0 -1 4 |  |
+QR-Code:(#42,R,7151,0,0) 0 1 0 0 center 0 0 -1 -1 0 |  | penalty for defense, only defense
+QR-Code:(#42,R,5159,0,0) 0 1 0 0 left 0 0 10 -1 0 |  |
+QR-Code:(#42,B,3374,0,0) 0 0 0 0 right 1 4 -1 -1 0 |  | pretty good defense and offense secured enemy switch
+QR-Code:(#42,B,159,0,0) 0 0 0 0 center 2 0 -1 -1 0 | 2 0 3 1 3 1 3 0 1 0 | trouble holding onto cubes
