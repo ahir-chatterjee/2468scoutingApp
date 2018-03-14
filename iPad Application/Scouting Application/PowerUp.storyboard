@@ -396,6 +396,15 @@
                                     <action selector="failed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypd-PM-DCo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRe-oX-Ecm">
+                                <rect key="frame" x="601" y="516" width="87" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zY0-V1-GIX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98806764088141652" green="0.97263560998406717" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.16600189299700485" green="0.22515010600926244" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -411,6 +420,7 @@
                         <outlet property="assistPicker" destination="bjd-QF-RTL" id="l2U-GZ-yXN"/>
                         <outlet property="autoscaleInput" destination="9ci-cM-0U4" id="Cyb-h3-n30"/>
                         <outlet property="autoswitchInput" destination="SkZ-wS-Pbl" id="KrV-hJ-Gci"/>
+                        <outlet property="cancelButton" destination="eRe-oX-Ecm" id="Ad8-m0-jRW"/>
                         <outlet property="commentInput" destination="8dq-io-Ygi" id="ZHR-tF-9cS"/>
                         <outlet property="descriptionPicker" destination="VJn-pW-xZt" id="fhO-Fl-9qE"/>
                         <outlet property="failedButton" destination="4BB-Ad-MGh" id="NJG-I4-b7x"/>

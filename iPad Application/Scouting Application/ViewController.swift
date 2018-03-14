@@ -16,7 +16,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var matchInput: UITextField!
     @IBOutlet weak var teamInput: UITextField!
     @IBOutlet weak var matchColor: UISegmentedControl!
-    @IBOutlet weak var scoreInput: UITextField!
     @IBOutlet weak var commentInput: UITextField!
     @IBOutlet weak var autoscaleInput: UITextField!
     @IBOutlet weak var autoswitchInput: UITextField!
@@ -30,6 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var failedButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         State.global = State()
@@ -50,7 +50,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         failedButton.isHidden = true
         failedButton.isUserInteractionEnabled = false
-        
+        cancelButton.isHidden = true
+        cancelButton.isUserInteractionEnabled = false
+        pauseButton.isHidden = true
+        pauseButton.isUserInteractionEnabled = false
         startButton.isHidden = false
         startButton.isUserInteractionEnabled = true
         
@@ -70,6 +73,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pauseButton.isUserInteractionEnabled = true
         failedButton.isHidden = false
         failedButton.isUserInteractionEnabled = true
+        cancelButton.isHidden = false
+        cancelButton.isUserInteractionEnabled = true
         
         internalTimer = AsyncTimer(interval: .seconds(1), repeats: true, block: { () in
             self.timerValue.text = String(Int(Date().timeIntervalSince(self.startTime!)))
@@ -92,11 +97,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         pauseButton.isHidden = true
         pauseButton.isUserInteractionEnabled = false
-        
+        cancelButton.isHidden = true
+        cancelButton.isUserInteractionEnabled = false
+        failedButton.isHidden = true
+        failedButton.isUserInteractionEnabled = false
         startButton.isHidden = false
         startButton.isUserInteractionEnabled = true
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        internalTimer?.stop()
+        timerValue.text = ""
+        startButton.isHidden = false
+        startButton.isUserInteractionEnabled = true
+        cancelButton.isHidden = true
+        cancelButton.isUserInteractionEnabled = false
+        failedButton.isHidden = true
+        failedButton.isUserInteractionEnabled = false
+        pauseButton.isHidden = true
+        pauseButton.isUserInteractionEnabled = false
+        
+    }
     @IBOutlet weak var OpposingSwitch: UIStepper!
     @IBOutlet weak var OpposingSwitchInput: UITextField!
     
@@ -141,13 +162,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         descriptionOptions = ["left", "center", "right"]
-        assistOptions = ["N/A", "Failed", "Assisted"]
+        assistOptions = ["N/A", "Failed", "Assisted", "Double Assist"]
         descriptionPicker.delegate = self
         descriptionPicker.dataSource = self
         assistPicker.delegate = self
         assistPicker.dataSource = self
         pauseButton.isHidden = true
         failedButton.isHidden = true
+        cancelButton.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -187,7 +209,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        if pickerView == descriptionPicker{
+            return 3
+        }
+        else{
+            return 4
+        }
     }
   
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
