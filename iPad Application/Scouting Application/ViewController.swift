@@ -13,6 +13,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var descriptionOptions = [""]
     var assistOptions = [""]
     var internalTimer: AsyncTimer? = nil
+    var count1 = 0
+    var count2 = 0
     @IBOutlet weak var matchInput: UITextField!
     @IBOutlet weak var teamInput: UITextField!
     @IBOutlet weak var matchColor: UISegmentedControl!
@@ -31,6 +33,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var failedButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var successCount: UITextField!
+    
+    @IBOutlet weak var failedCount: UITextField!
+    
     override func viewDidAppear(_ animated: Bool) {
         State.global = State()
     }
@@ -47,7 +53,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             internalTimer?.stop()
             timerValue.text = ""
         }
-        
+        count2 = count2 + 1
+        self.failedCount.text = String(count2)
         failedButton.isHidden = true
         failedButton.isUserInteractionEnabled = false
         cancelButton.isHidden = true
@@ -84,7 +91,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     @IBAction func pause(_ sender: Any) {
-        
         let timeElapsed = Date().timeIntervalSince(startTime!)
         
         if timeElapsed > 0.5 {
@@ -94,7 +100,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             internalTimer?.stop()
             timerValue.text = ""
         }
-        
+           count1 = count1 + 1
+        self.successCount.text = String(count1)
         pauseButton.isHidden = true
         pauseButton.isUserInteractionEnabled = false
         cancelButton.isHidden = true
