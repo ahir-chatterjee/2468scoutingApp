@@ -1,0 +1,6 @@
+framework module Pods_pitScouting {
+  umbrella header "Pods-pitScouting-umbrella.h"
+
+  export *
+  module * { export * }
+}
