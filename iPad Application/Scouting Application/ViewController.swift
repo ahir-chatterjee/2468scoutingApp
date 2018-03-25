@@ -169,7 +169,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         descriptionOptions = ["left", "center", "right"]
-        assistOptions = ["N/A", "Failed", "Assisted", "Double Assist"]
+        assistOptions = ["N/A", "Failed", "Gave Assistance", "Gave Double Assist"]
         descriptionPicker.delegate = self
         descriptionPicker.dataSource = self
         assistPicker.delegate = self
