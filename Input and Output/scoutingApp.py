@@ -2,6 +2,8 @@ import json
 import radarPlot
 import spreadsheetMaker
 import multiRadarPlot
+import autoChart
+import teleChart
 
 def runScoutingApp():
     class Match(object):
@@ -70,6 +72,11 @@ def runScoutingApp():
         def importDict(self,diction):
             for key in self.dict:
                 self.dict[key] = diction[key]
+
+        def compareTeam(self,other):
+            if(self.dict["number"] == other.dict["number"]):
+                return True
+            return False
     
     def enterMatch():
         matchInfo = raw_input("Enter match string: ").split()
@@ -101,9 +108,9 @@ def runScoutingApp():
         sumSwitch = 0
         for i in range(0,len(team.dict["matches"])):
             cubes = (int)(team.dict["teleSwitch"][i]) + (int)(team.dict["teleOppSwitch"][i])
-            if(cubes >= 7):
+            if(cubes >= 6):
                 sumSwitch += 5
-            elif(cubes >= 5):
+            elif(cubes >= 4):
                 sumSwitch += 4
             elif(cubes >= 3):
                 sumSwitch += 3
@@ -128,11 +135,11 @@ def runScoutingApp():
                 sumScale += 1
             elif(cubes >= 7 and acc >= 0.75):
                 sumScale += 5
-            elif((cubes >= 5 and acc >= .75) or cubes >= 7):
+            elif((cubes >= 4 and acc >= .75) or cubes >= 7):
                 sumScale += 4
-            elif((cubes >= 3 and acc >= .75) or cubes >= 5):
+            elif((cubes >= 2 and acc >= .75) or cubes >= 4):
                 sumScale += 3
-            elif((cubes > 0 and acc >= .75) or cubes >= 3):
+            elif((cubes > 0 and acc >= .75) or cubes >= 2):
                 sumScale += 2
             elif(cubes > 0):
                 sumScale += 1
@@ -148,13 +155,13 @@ def runScoutingApp():
                 sumHang += 0
             elif(result > 30):
                 sumHang += 1
-            elif(result > 25):
+            elif(result > 21):
                 sumHang += 2
-            elif(result > 20):
+            elif(result > 16):
                 sumHang += 3
-            elif(result > 15):
+            elif(result > 9):
                 sumHang += 4
-            elif(result < 15):
+            elif(result < 9):
                 sumHang += 5
         hang = (float)(sumHang)/numMatches
 
@@ -162,9 +169,9 @@ def runScoutingApp():
         sumVault = 0
         for i in range(0,len(team.dict["matches"])):
             cubes = (int)(team.dict["vaultBlocks"][i])
-            if(cubes >= 5):
+            if(cubes >= 7):
                 sumVault += 5
-            elif(cubes >= 4):
+            elif(cubes >= 5):
                 sumVault += 4
             elif(cubes >= 3):
                 sumVault += 3
@@ -186,6 +193,23 @@ def runScoutingApp():
         team2Stats = radarPlotStats(team2)
         team3Stats = radarPlotStats(team3)
         multiRadarPlot.createMultiRadarPlot(team1Stats,team2Stats,team3Stats)
+
+    def readPreScoutingFile(filename):
+        matchFile = open(filename+".txt",'r')
+        for line in matchFile:
+            if(line[0:2] == "QR"):
+                info = line[8:].split('|')
+                info[len(info)-1] = info[len(info)-1][:len(info[8])]
+                print info
+                newTeam = Team(info[0])
+                newTeam.addPreData(info)
+                entered = False
+                for team in teamList:
+                    if(team.compareTeam(newTeam)):
+                        team.addPreData(info)
+                        entered = True
+                if(not entered):
+                    teamList.append(newTeam)
 
     def readMatchFile(filename):
         matchFile = open(filename+".txt",'r')
@@ -333,6 +357,99 @@ def runScoutingApp():
             newTeam.importDict(teamDict)
             returnList.append(newTeam)
         return returnList
+
+    def autoBarChart():
+        teams = raw_input("Enter red robots: ").split()
+        temp = raw_input("Enter blue robots: ").split()
+        for team in temp:
+            teams.append(team)
+        autoRun = []
+        switch = []
+        scale = []
+        matchNum = raw_input("Enter matchNum: ")
+        for teamNum in teams:
+            for team in teamList:
+                if(team.dict["number"] == teamNum):
+                    aR = 0
+                    sW = 0
+                    sC = 0
+                    matches = 0
+                    for match in team.dict["autoLine"]:
+                        aR += (int)(match)
+                        matches += 1
+                    for match in team.dict["autoSwitch"]:
+                        sW += (int)(match)
+                    for match in team.dict["autoScale"]:
+                        sC += (int)(match)
+                    aR = round((float)(aR)/(float)(matches),3)
+                    sW = round((float)(sW)/(float)(matches),3)
+                    sC = round((float)(sC)/(float)(matches),3)
+                    autoRun.append(aR)
+                    switch.append(sW)
+                    scale.append(sC)
+        print autoRun
+        print switch
+        print scale
+        autoChart.createBarChart(autoRun,switch,scale,teams,matchNum)
+
+    def teleBarChart():
+        teams = raw_input("Enter red robots: ").split()
+        temp = raw_input("Enter blue robots: ").split()
+        for team in temp:
+            teams.append(team)
+        vault = []
+        switch = []
+        oppSwitch = []
+        scale = []
+        hang = []
+        assist = []
+        matchNum = raw_input("Enter matchNum: ")
+        for teamNum in teams:
+            for team in teamList:
+                if(team.dict["number"] == teamNum):
+                    v = 0
+                    sW = 0
+                    oSW = 0
+                    sC = 0
+                    h = 0
+                    a = 0
+                    matches = 0
+                    for match in team.dict["vaultBlocks"]:
+                        v += (int)(match)
+                        matches += 1
+                    for match in team.dict["teleSwitch"]:
+                        sW += (int)(match)
+                    for match in team.dict["teleOppSwitch"]:
+                        oSW += (int)(match)
+                    for match in team.dict["teleScale"]:
+                        for delivery in match:
+                            if((int)(delivery[1]) == 1):
+                                sC += 1
+                    for match in team.dict["hang"]:
+                        if((int)(match) > 0):
+                            h += 1
+                    for match in team.dict["assistance"]:
+                        if((int)(match) > 0):
+                            a += (int)(match)
+                    v = round((float)(v)/(float)(matches),1)
+                    sW = round((float)(sW)/(float)(matches),1)*1.2
+                    oSW = round((float)(oSW)/(float)(matches),1)*1.2
+                    sC = round((float)(sC)/(float)(matches),1)*3
+                    h = round((float)(h)/(float)(matches),1)*4
+                    a = round((float)(a)/(float)(matches),1)*4
+                    vault.append(v)
+                    switch.append(sW)
+                    oppSwitch.append(oSW)
+                    scale.append(sC)
+                    hang.append(h)
+                    assist.append(a)
+        print vault
+        print switch
+        print oppSwitch
+        print scale
+        print hang
+        print assist
+        teleChart.createBarChart(vault,switch,oppSwitch,scale,hang,assist,teams,matchNum)
     
     def save():
         teamDictList = []
@@ -445,7 +562,22 @@ def runScoutingApp():
                             team3 = team
                     createMultiPlot(team1,team2,team3)
                 else:
-                    print "multiPlot takes exatly 4 parameters (team1,team2,team3)"
+                    print "multiPlot takes exactly 4 parameters (team1,team2,team3)"
+            elif(basecmd == "barChart"):
+                if(len(cmdarray) == 2):
+                    if(cmdarray[1] == "auto"):
+                        autoBarChart()
+                    elif(cmdarray[1] == "tele"):
+                        teleBarChart()
+                    else:
+                        print "barChart " + (str)(cmdarray[1]) + " is unknown."
+                else:
+                    print "barChart takes exactly 1 parameter (auto/tele)"
+            elif(basecmd == "readPreFile"):
+                if(len(cmdarray) == 2):
+                    readPreScoutingFile(cmdarray[1])
+                else:
+                    print "readPreFile takes exactly 1 parameter (fileName)"
             else:
                 print "Unknown command. Type 'help' for a list of valid commands."
             
@@ -454,7 +586,7 @@ def runScoutingApp():
     matchList = loadMatchesList("matches.txt")
     teamList = loadTeamsList("teams.txt")
     
-    cmds = ["runApp","matchReport","preScouting","team","match","help","save","readMatchFile","makeSpreadsheet","radarPlot","multiPlot"]
+    cmds = ["readPreFile","preScouting","help","save","readMatchFile","makeSpreadsheet","radarPlot","close","barChart"]
     while True:
         print "Enter a command."
         cmd = raw_input("")

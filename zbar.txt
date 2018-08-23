@@ -1,0 +1,1 @@
+zbarcam \dev\video0 > C:\scoutingApp\Storage\

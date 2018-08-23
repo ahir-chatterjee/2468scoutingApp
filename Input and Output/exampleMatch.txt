@@ -9,4 +9,4 @@ QR-Code:(#1,B,3467,0,1) 0 0 0 0 right 0 0 -1 -1 0 |  | Can't intake cubes
 QR-Code:(#1,B,319,0,1) 0 0 0 0 left 2 0 -1 -1 5 |  |
 QR-Code:(#1,B,1729,0,1) 0 1 0 0 left 1 0 -1 -1 0 | 4 1 1 0 | Unstable when carrying cube
 QR-Code:(#1,R,1721,0,1) 0 0 0 0 right 0 0 -1 -1 0 |  | Didn't show up to match
-QR-Code:(#1,R,7314,0,0) 0 0 0 0 center 0 0 -1 -1 0 |  | Can't lift blocks and failed to drive up teammates ramp
+QR-Code:(#1,R,7314,0,1) 0 0 0 0 center 0 0 -1 -1 0 |  | Can't lift blocks and failed to drive up teammates ramp
