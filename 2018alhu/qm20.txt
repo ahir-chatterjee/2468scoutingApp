@@ -1,0 +1,6 @@
+QR-Code:(#20,R,5005,0,0) 0 0 0 0 left 0 0 15 -1 0 |  | 
+QR-Code:(#20,B,7111,0,0) 0 1 0 0 right 0 2 -1 -1 0 |  | 
+QR-Code:(#20,B,6404,0,0) 0 1 0 0 left 6 0 7 -1 3 |  | 
+QR-Code:(#20,R,2815,0,0) 0 1 1 0 center 2 0 -1 -1 6 |  | 
+QR-Code:(#20,B,141,0,0) 0 0 1 0 center 0 0 -1 -1 0 | 5 1 5 1 | fell over after deposit on scale
+QR-Code:(#20,R,7026,0,0) 0 1 0 0 right 0 4 -1 -1 0 |  | 

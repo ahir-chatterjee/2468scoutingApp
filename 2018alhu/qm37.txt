@@ -1,0 +1,6 @@
+QR-Code:(#37,B,342,1,0) 0 1 0 0 left 0 3 5 -1 0 | 5 1 7 1 7 1 7 1 | 
+QR-Code:(#37,R,7072,1,0) 0 0 0 0 center 0 0 -1 -1 6 |  | 
+QR-Code:(#37,B,3792,1,0) 0 1 1 0 center 0 0 -1 -1 9 |  | 
+QR-Code:(#37,B,2973,1,0) 0 1 0 0 left 0 1 -1 -1 0 |  | 
+QR-Code:(#37,R,3843,1,0) 0 1 0 0 right 1 0 11 -1 0 |  | Spun to the left when auto started, though line was crossed.
+QR-Code:(#37,R,4740,1,0) 0 1 0 0 left 0 0 -1 -1 0 |  | 

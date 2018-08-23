@@ -1,0 +1,6 @@
+QR-Code:(#18,R,4087,1,0) 0 1 0 0 center 2 2 -1 -1 9 |  | 
+QR-Code:(#18,R,538,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | shakes heavily , bricked halfway through 
+QR-Code:(#18,B,7065,1,0) 0 1 0 0 center 0 0 -1 -1 0 |  | actually did nothing but drive around
+QR-Code:(#18,B,442,1,0) 0 1 0 0 left 0 0 -1 -1 5 |  | 
+QR-Code:(#18,B,4924,1,0) 0 0 0 0 right 3 0 -1 -1 0 |  | flipped when tried to get on ramp
+QR-Code:(#18,R,3792,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | they bricked, but if they hadn't they seemed designed to do NOTHING but double assist hang

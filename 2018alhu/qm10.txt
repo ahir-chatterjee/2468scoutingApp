@@ -1,0 +1,6 @@
+QR-Code:(#10,B,2973,1,1) 0 0 0 0 left 1 1 -1 -1 0 | 6 0 6 1 | 
+QR-Code:(#10,B,7111,1,1) 0 1 0 0 left 3 0 -1 -1 0 |  | passive intake, has difficulty pushing blocks out at times
+QR-Code:(#10,R,6107,1,1) 0 0 0 0 right 0 0 -1 -1 0 |  | not on field 
+QR-Code:(#10,R,3139,1,1) 0 0 0 0 left 0 0 -1 -1 0 |  | didn't show up
+QR-Code:(#10,R,3959,1,1) 0 1 1 0 center 4 3 -1 -1 3 | 3 1 3 1 5 1 | won by a large margin by itself (was only robot on field and opposing alliance had 3)
+QR-Code:(#10,B,5410,1,1) 0 0 0 0 center 2 0 -1 -1 1 | 7 1 | 

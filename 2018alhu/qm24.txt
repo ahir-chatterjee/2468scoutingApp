@@ -1,0 +1,6 @@
+QR-Code:(#24,R,3966,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | only defense 
+QR-Code:(#24,B,442,1,1) 0 0 0 0 right 0 0 2 -1 0 |  | 
+QR-Code:(#24,R,141,1,1) 0 0 0 0 center 0 0 -1 -1 0 | 4 1 5 1 5 1 6 1 4 1 | 
+QR-Code:(#24,B,4306,0,0) 0 1 0 0 left 0 0 -1 -1 0 |  | was defended against by 3966 entire match
+QR-Code:(#24,R,4924,1,1) 0 1 0 0 right 0 0 -1 -1 3 |  | Robot possibly bricked near the end of teleop since it didn't move.
+QR-Code:(#24,B,3139,0,0) 0 1 0 0 center 1 0 -1 -1 5 |  | auto cube failed.

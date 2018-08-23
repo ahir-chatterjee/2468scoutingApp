@@ -1,0 +1,6 @@
+QR-Code:(#27,B,4533,1,0) 0 0 1 0 center 0 0 -1 -1 2 |  | 
+QR-Code:(#27,B,3319,1,0) 0 1 0 0 right 0 0 -1 -1 0 |  | bricked for a brief moment
+QR-Code:(#27,B,3843,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | died during auto, stayed dead
+QR-Code:(#27,R,34,1,0) 0 1 0 0 right 0 0 -1 -1 6 | 6 1 | decent driving with swerve 
+QR-Code:(#27,R,6937,1,0) 0 0 0 0 left 1 0 -1 -1 0 |  | 
+QR-Code:(#27,R,7026,1,0) 0 1 0 0 center 1 2 -1 -1 0 |  | 2 of the switch blocks scored were from the vault.

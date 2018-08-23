@@ -1,0 +1,6 @@
+QR-Code:(#22,R,3319,0,0) 0 1 0 0 right 1 0 -1 -1 0 | 3 1 4 0 4 1 | 
+QR-Code:(#22,B,3593,0,0) 0 1 1 0 center 0 2 -1 -1 0 | 3 1 5 1 4 1 | 
+QR-Code:(#22,B,2556,0,0) 0 1 0 0 left 0 0 0 -1 0 | 2 1 6 1 5 0 6 1 | 
+QR-Code:(#22,R,2973,0,0) 0 0 0 0 center 0 0 -1 -1 0 | 3 1 | 
+QR-Code:(#22,B,5058,0,0) 0 1 0 0 right 0 0 -1 -1 3 |  | 
+QR-Code:(#22,R,1369,0,0) 0 0 0 0 left 0 0 -1 -1 0 |  | Robot bricked in auto and teleop and only went in circles. likely due to uncalibrated joysticks for teleop.

@@ -1,0 +1,6 @@
+QR-Code:(#36,B,4924,0,0) 0 1 0 0 left 0 0 17 -1 4 |  | 
+QR-Code:(#36,B,538,0,0) 0 1 0 0 right 0 0 -1 -1 0 |  | 
+QR-Code:(#36,R,5005,0,0) 0 1 0 0 left 1 0 -1 -1 0 |  | 
+QR-Code:(#36,R,6366,0,0) 0 1 0 0 right 0 1 15 -1 0 | 6 1 2 0 6 1 | played defense, got penalty for getting caught on scale, when hangs it falls slowly
+QR-Code:(#36,B,5410,0,0) 0 1 1 0 center 0 0 -1 -1 0 | 5 1 | 
+QR-Code:(#36,R,3319,0,0) 0 1 0 0 center 0 1 -1 -1 0 | 6 1 | 

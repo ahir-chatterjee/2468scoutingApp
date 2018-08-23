@@ -1,0 +1,6 @@
+QR-Code:(#32,B,538,1,1) 0 1 0 0 center 0 0 -1 -1 0 |  | 
+QR-Code:(#32,R,3843,1,1) 0 0 0 0 left 0 0 -1 -1 0 |  | bricked mid match
+QR-Code:(#32,B,34,1,1) 0 1 0 0 right 0 0 -1 -1 5 |  | 
+QR-Code:(#32,R,547,1,1) 0 1 0 0 left 0 0 10 -1 3 |  | 
+QR-Code:(#32,R,1319,1,1) 0 1 0 1 right 0 1 -1 -1 4 | 7 1 13 1 5 1 | Solid scale bot
+QR-Code:(#32,B,7111,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | flipped

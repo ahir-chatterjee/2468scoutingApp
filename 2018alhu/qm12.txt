@@ -1,0 +1,6 @@
+QR-Code:(#13,R,547,0,1) 0 0 0 0 right 1 2 13 -1 0 |  | passive intake , long hang time 
+QR-Code:(#12,R,7072,0,1) 0 1 0 0 left 1 0 -1 -1 4 |  | 
+QR-Code:(#12,B,5058,0,1) 0 1 0 0 right 0 0 -1 -1 2 |  | 
+QR-Code:(#12,B,6366,0,1) 0 1 0 0 left 0 0 12 -1 0 | 3 1 3 1 | ran directly into scale, almost flipped.
+QR-Code:(#12,B,2468,0,1) 0 1 0 0 center 4 0 -1 -1 7 |  | 
+QR-Code:(#12,R,34,0,1) 0 0 0 0 center 0 0 -1 -1 1 | 12 1 12 0 2 1 6 1 | 

@@ -1,0 +1,6 @@
+QR-Code:(#4,R,538,1,0) 0 0 0 0 left 0 0 -1 -1 1 |  | 
+QR-Code:(#4,B,6107,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | didn't show up
+QR-Code:(#4,R,5058,1,0) 0 1 0 0 left 1 0 -1 -1 1 |  | 
+QR-Code:(#4,B,5616,1,0) 0 0 0 0 center 0 0 -1 -1 0 |  | bricked
+QR-Code:(#4,R,3966,1,0) 0 0 0 0 right 0 0 -1 -1 0 | 7 1 7 1 | Take a really long time to score in the scale (only two blocks this round). Robot is unstable and I thought it would tip over.
+QR-Code:(#4,B,141,1,0) 0 1 0 1 right 1 0 -1 -1 0 | 5 1 4 0 4 1 4 1 2 0 | intake dropped cube several times while trying to score. Literally won by themselves though

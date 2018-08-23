@@ -1,0 +1,6 @@
+QR-Code:(#1,B,5045,0,1) 0 1 0 0 center 0 0 -1 -1 0 | 10 0 | robot flipped
+QR-Code:(#1,R,6404,0,1) 0 1 0 0 left 2 2 5 -1 0 |  | 
+QR-Code:(#1,B,5410,0,1) 0 1 0 0 right 0 0 -1 -1 0 | 3 0 | robot immediately fell over when trying to score scale, out for the rest of the match. penalized for blocking hang. 
+QR-Code:(#1,B,6937,0,1) 0 0 0 0 left 1 0 -1 -1 0 |  | 
+QR-Code:(#1,R,1369,0,1) 0 1 0 0 right 0 0 -1 -1 9 | 3 1 | took all of auto to fill up vault 
+QR-Code:(#1,R,3792,0,1) 0 1 0 0 center 2 0 -1 -1 0 | 0 1 2 1 3 1 | missed switch in auto

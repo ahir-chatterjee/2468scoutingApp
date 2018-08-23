@@ -1,0 +1,6 @@
+QR-Code:(#30,R,442,1,0) 0 0 0 0 right 0 0 8 -1 0 |  | swaying easily 
+QR-Code:(#30,B,7065,1,0) 0 1 0 0 right 0 0 -1 -1 0 |  | just drove around or sat in one place
+QR-Code:(#30,B,3959,1,0) 0 0 1 0 center 0 0 -1 -1 3 | 2 1 3 1 3 1 4 1 4 1 3 1 4 1 5 1 | 
+QR-Code:(#30,R,1369,1,0) 0 1 0 0 left 0 0 -1 -1 3 | 5 1 6 1 7 0 | 
+QR-Code:(#30,B,4740,1,0) 0 1 0 0 left 0 0 -1 -1 4 |  | 
+QR-Code:(#30,R,141,1,0) 0 0 0 0 center 0 0 -1 -1 0 | 3 1 4 1 5 1 | 

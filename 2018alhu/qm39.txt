@@ -1,0 +1,6 @@
+QR-Code:(#39,B,5045,0,1) 0 1 0 0 left 0 0 -1 -1 8 |  | 
+QR-Code:(#39,R,4924,0,1) 0 1 0 0 right 0 0 -1 -1 0 | 5 1 | Bot fell during teleop
+QR-Code:(#39,B,3959,0,1) 0 1 1 0 center 0 1 -1 -1 0 | 3 1 3 1 3 1 3 1 3 1 4 1 3 0 | 
+QR-Code:(#39,R,2556,0,1) 0 1 1 0 center 0 0 -1 -1 0 | 5 0 5 1 3 1 4 1 2 1 | 
+QR-Code:(#39,B,5058,0,1) 0 1 0 0 right 0 0 -1 -1 0 |  | 
+QR-Code:(#39,R,5005,0,1) 0 1 0 0 left 0 0 -1 -1 0 |  | bricked

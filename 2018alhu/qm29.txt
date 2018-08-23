@@ -1,0 +1,6 @@
+QR-Code:(#29,R,7313,1,1) 0 1 0 0 left 0 0 -1 -1 0 |  | bricked after auto
+QR-Code:(#29,R,5410,1,1) 0 1 0 0 right 0 0 -1 -1 0 | 6 0 7 1 | Likely Bricked halfway through.
+QR-Code:(#29,B,5616,1,1) 0 1 0 0 right 0 0 -1 -1 0 |  | didn't do anything
+QR-Code:(#29,B,538,1,1) 0 1 0 0 left 0 0 -1 0 0 |  | 
+QR-Code:(#29,R,2815,1,1) 0 1 1 0 center 1 0 -1 -1 7 |  | 
+QR-Code:(#29,B,7072,1,1) 0 1 0 0 left 0 0 -1 -1 5 |  | 

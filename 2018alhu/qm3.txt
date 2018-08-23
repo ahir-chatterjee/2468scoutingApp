@@ -1,0 +1,6 @@
+QR-Code:(#3,R,2973,1,0) 0 1 0 0 right 0 0 -1 -1 0 | 11 1 | 
+QR-Code:(#3,B,7313,1,0) 0 0 0 0 center 0 0 -1 -1 0 |  | spun in circles the whole time; didn't do anything 
+QR-Code:(#3,R,2468,1,0) 0 1 1 0 center 0 2 -1 -1 5 |  | 
+QR-Code:(#3,R,3843,1,0) 0 1 0 0 left 1 0 -1 -1 1 |  | Took a long time to score cubes into the switch.
+QR-Code:(#3,B,442,1,0) 0 0 0 0 left 0 0 -1 -1 0 |  | Bricked
+QR-Code:(#3,B,5005,1,0) 0 0 0 0 right 1 0 0 -1 0 |  | has no way of interacting with blocks? Basically just chucked a cube out off the robot. played defense the whole time. very unstable (high center of mass)
